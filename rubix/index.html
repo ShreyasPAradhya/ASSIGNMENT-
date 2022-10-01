@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.7)), url('rubix event.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+p {
+  
+  text-align: center;
+  font-size: 60px;
+  margin-top: 10px;
+  position: relative;
+  color: brown;
+}
+
+.container {
+  
+  position: absolute; bottom:100px; right:10px; width:535px; text-align:right; top:0;
+}
+.typed-out{
+    overflow: hidden;
+    border-right: .15em  solid rgb(255, 0, 0);
+    white-space: nowrap;
+    font-size: 1.8rem;
+    width: 0;
+    animation: typing 2s steps(40,end) forwards;
+    color:brown;
+    font-size:32px;
+    
+} 
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+</style>
+<img src="NISB short black.png" style="width:100px;height:100px;position: relative; vertical-align: top
+;"/>
+
+</head>
+<body>
+  <img src="rubix logo black.svg" width="700" 
+  height="600" align="middle"/>
+<p id="demo"></p>
+<div  id="timer"> 
+<script>
+var countDownDate = new Date("October 10, 2022 17:37:25").getTime();
+var x = setInterval(function() {
+  var curr = new Date().getTime();
+    
+  
+  var distance = countDownDate - curr;
+    
+  
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+
+  document.getElementById("demo").innerHTML = days + "D " + hours + "h "
+  + minutes + "m "  + seconds + "s ";
+    
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+</div>
+<div class="container">
+  <div font-family: 'Trebuchet MS', sans-serif class="typed-out">WELCOME TO NISB! &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp;  &emsp;&ensp;<br>We are conducting a month long fest with <br>amazing events and workshops.&nbsp;&ensp;&emsp; &emsp; &emsp; <br>Come join us! &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;                     </div>
+</body>
+</html>
